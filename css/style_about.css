@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ==================== NAVBAR STYLES (id=navbar) ==================== */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0F2A1D;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+#navbar .logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+}
+
+#navbar .logo span {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#navbar .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    align-items: center;
+}
+
+#navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
+    color: #0F2A1D;
+    background: #aec3b0;
+    transform: translateY(-2px);
+}
+
+#navbar .nav-buttons {
+    display: flex;
+    gap: 15px;
+    background: rgba(255,255,255,0.03);
+    padding: 6px;
+    border-radius: 999px;
+    align-items: center;
+}
+
+#navbar .btn-masuk,
+#navbar .btn-keluar {
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    letter-spacing: 0.5px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar .btn-masuk {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.9);
+}
+
+#navbar .btn-masuk:hover {
+    background: white;
+    color: #0F2A1D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+#navbar .btn-keluar {
+    background: #7FD957;
+    color: #0F2A1D;
+    border: 2px solid rgba(127,217,87,0.9);
+}
+
+#navbar .btn-keluar:hover {
+    background: #6BC847;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15,42,29,0.12);
+}
+
+#navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#navbar .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Section Definisi */
+#definisi {
+    background-color: #E3EED4;
+    padding: 100px 50px 100px;
+    margin-top: 0px;
+}
+
+.definisi-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.definisi-image {
+    position: relative;
+    flex: 1;
+}
+
+.img-plant {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-top: -45px; /* Atur sesuai dengan kebutuhan untuk mengangkat gambar */
+}
+
+.img-logo-card {
+    position: absolute;
+    bottom: -120px;
+    right: -30px;
+    width: 320px;
+    height: 210px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.definisi-content {
+    flex: 1;
+}
+
+.definisi-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0F2A1D;
+    margin-bottom: 25px;
+}
+
+.desc-main {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0F2A1D;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.desc-detail {
+    font-size: 15px;
+    font-weight: 400;
+    color: #0F2A1D;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Section Visi Misi */
+#visi-misi {
+    background-image: url('../img/about-03.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 30px 10px;
+    min-height: 30vh;
+}
+
+.visi-misi-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 60px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.visi-misi-overlay h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.visi-misi-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+}
+
+.misi-cards {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.misi-card {
+    background-color: #AEC380;
+    padding: 10px 20px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 270px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.misi-card:hover {
+    transform: translateY(-10px);
+}
+
+.misi-number {
+    font-size: 30px;
+    font-weight: 700;
+    color: #0F2A1D;
+    margin-bottom: 10px;
+}
+
+.misi-card p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #0F2A1D;
+    line-height: 1.6;
+}
+
+/* Section Tim Pengembang */
+#tim-pengembang {
+    background-color: #E3EED4;
+    padding: 20px 50px;
+}
+
+#tim-pengembang h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #0F2A1D;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tim-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: #0F2A1D;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.tim-cards {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tim-card {
+    background-color: #0F2A1D;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.tim-card:hover {
+    transform: translateY(-10px);
+}
+
+.tim-photo {
+    width: 180px;
+    height: 180px;
+    background-color: #C85C5C;
+    border-radius: 15px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tim-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tim-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .definisi-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-logo-card {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .misi-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tim-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+    }
+  
+    #definisi {
+        padding: 120px 20px 80px;
+    }
+
+    .definisi-content h1 {
+        font-size: 32px;
+    }
+
+    .visi-misi-overlay h2,
+    #tim-pengembang h2 {
+        font-size: 36px;
+    }
+}

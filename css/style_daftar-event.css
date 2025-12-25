@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ==================== NAVBAR STYLES (id=navbar) ==================== */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0F2A1D;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#navbar .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+#navbar .logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+}
+
+#navbar .logo span {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#navbar .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+    align-items: center;
+}
+
+#navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link.active {
+    color: #0F2A1D;
+    background: #aec3b0;
+    transform: translateY(-2px);
+}
+
+#navbar .nav-buttons {
+    display: flex;
+    gap: 15px;
+    background: rgba(255,255,255,0.03);
+    padding: 6px;
+    border-radius: 999px;
+    align-items: center;
+}
+
+#navbar .btn-masuk,
+#navbar .btn-keluar {
+    padding: 8px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    letter-spacing: 0.5px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar .btn-masuk {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.9);
+}
+
+#navbar .btn-masuk:hover {
+    background: white;
+    color: #0F2A1D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+#navbar .btn-keluar {
+    background: #7FD957;
+    color: #0F2A1D;
+    border: 2px solid rgba(127,217,87,0.9);
+}
+
+#navbar .btn-keluar:hover {
+    background: #6BC847;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15,42,29,0.12);
+}
+
+#navbar .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#navbar .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Section Cari Event */
+#cari-event {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    padding: 10px 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.468);
+    border-radius: 50px;
+    padding: 10px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#searchInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 12px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff9f9;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #fff9f9;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.search-btn i {
+    color: white;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    transform: scale(1.1);
+}
+
+.search-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Section Daftar Event */
+#daftar-event {
+    background-color: #E7EFDA;
+    padding: 60px 40px;
+    min-height: 100vh;
+}
+
+.event-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.event-header h2  {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1B4332;
+    position: relative;
+    display: inline-block;
+}
+
+.event-header h2::before,
+.event-header h2::after {
+    content: '—';
+    margin: 0 20px;
+    color: #1B4332;
+}
+
+.event-header h4 {
+    color: #1B4332;
+}
+
+/* Event Cards Container */
+.event-cards-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Event Card */
+.event-card {
+    background-color: #779B7F;
+    border-radius: 15px;
+    overflow: visible;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    z-index: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-daftar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #3D5F3E;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.btn-daftar:hover {
+    background-color: #2d4a2e;
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px 25px 25px 25px;
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Date Box */
+.date-box {
+    background-color: #E7EFDA;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    min-width: 110px;
+    max-width: 110px;
+    height: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    position: absolute;
+    left: 25px;
+    top: -40px;
+    z-index: 5;
+}
+
+.date-day {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1B4332;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.date-month {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1B4332;
+    margin-bottom: 5px;
+}
+
+.date-year {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B4332;
+}
+
+/* Event Info */
+.event-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 130px;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #E7EFDA;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.event-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #E7EFDA;
+    font-weight: 500;
+}
+
+.event-detail .icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.event-description {
+    font-size: 13px;
+    color: #E7EFDA;
+    line-height: 1.6;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.page-btn {
+    background-color: white;
+    border: 2px solid #779B7F;
+    color: #1B4332;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    min-width: 45px;
+}
+
+.page-btn:hover {
+    background-color: #779B7F;
+    color: white;
+}
+
+.page-btn.active {
+    background-color: #779B7F;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .event-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .nav-right {
+        flex-direction: column;
+    }
+    
+    #cari-event {
+        padding: 100px 20px 60px;
+        min-height: 300px;
+    }
+    
+    .search-title {
+        font-size: 36px;
+    }
+    
+    #daftar-event {
+        padding: 40px 20px;
+    }
+    
+    .event-header h2 {
+        font-size: 24px;
+    }
+    
+    .event-cards-container {
+        gap: 20px;
+    }
+    
+    .card-content {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    
+    .date-box {
+        position: absolute;
+        left: 20px;
+        top: -40px;
+    }
+    
+    .event-info {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-title {
+        font-size: 28px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+}

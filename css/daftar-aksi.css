@@ -1,0 +1,239 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  background: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background: #0D2D1E;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/*MAIN*/
+main {
+  margin-left: 240px; /* SAMA DENGAN LEBAR SIDEBAR */
+  width: calc(100% - 240px);
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.menu li i {
+  margin-right: 10px;
+}
+
+.menu li.active,
+.menu li:hover {
+  background: #B7C9B9;
+  color: #0D2D1E;
+  font-weight: 600;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+  background: #B7C9B9;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar input {
+  width: 280px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.top-icons i {
+  font-size: 18px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.profile {
+  font-weight: 600;
+}
+
+/* ================= CARD ================= */
+.card {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ================= HEADER ================= */
+.container-fluid h5 {
+  font-weight: 600;
+  color: #0D2D1E;
+}
+
+/* ================= BUTTON ================= */
+.btn-success {
+  background: #0D2D1E;
+  border: none;
+}
+
+.btn-success:hover {
+  background: #163f2c;
+}
+
+.btn-primary {
+  background: #0D2D1E;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #163f2c;
+}
+
+.btn-danger {
+  background: #c0392b;
+  border: none;
+}
+
+.btn-danger:hover {
+  background: #a93226;
+}
+
+/* ================= TABLE ================= */
+.table {
+  font-size: 13px;
+}
+
+.table thead th {
+  background: #f1f5f2;
+  color: #0D2D1E;
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background: #f8faf9;
+}
+
+/* ================= BADGE ================= */
+.badge.bg-success {
+  background: #198754 !important;
+}
+
+.badge.bg-secondary {
+  background: #6c757d !important;
+}
+
+/* ================================================= */
+/* ============== TAMBAHAN KHUSUS AKSI ============== */
+/* ================================================= */
+
+/* GAMBAR AKSI */
+.aksi-img {
+  width: 80px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* HEADER SECTION */
+.header-aksi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* BUTTON ICON */
+.btn-sm i {
+  font-size: 14px;
+}
+
+/* FORM TAMBAH / EDIT AKSI (UNTUK CRUD) */
+.form-aksi label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #0D2D1E;
+}
+
+.form-aksi input,
+.form-aksi select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* PREVIEW GAMBAR */
+.preview-img {
+  margin-top: 10px;
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .topbar input {
+    width: 180px;
+  }
+
+  .aksi-img {
+    width: 60px;
+    height: 40px;
+  }
+}
